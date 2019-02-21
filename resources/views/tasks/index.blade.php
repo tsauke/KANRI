@@ -15,8 +15,8 @@
             @foreach($folders as $folder)
               <a
                   href="{{ route('tasks.index', ['id' => $folder->id]) }}"
-                  class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}"
-              >
+                  class="list-group-item {{ $current_folder_id === $folder->id ? 'active' : '' }}">
+              
                 {{ $folder->title }}
               </a>
             @endforeach
@@ -33,15 +33,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <h5 class="card-title">検索フォーム</h5>
                                 <div id="custom-search-input">
                                     <div class="input-group col-md-12">
-                                        {{-- <form action="{{ route('tasks.search') }}" method="get"> --}}
-                                            
-                                            <input type="text" class="form-control input-lg" placeholder="Buscar" name="search" value="">
-                                            <span class="input-group-btn" style="position: relative;top: -36px;right: -179px;">
-                                                <button class="btn btn-info" type="submit">
-                                                    <i class="fas fa-search"></i>
                                                 </button>
                                             </span>
                                         </form>
@@ -67,6 +60,8 @@
             </tr>
             </thead>
             <tbody>
+
+
             @foreach($tasks as $task)
               <tr>
                 <td>{{ $task->title }}</td>
@@ -80,6 +75,7 @@
 
             </tbody>
           </table>
+          {{-- ページネーション --}}
           {{ $tasks->links() }}
 
         </div>

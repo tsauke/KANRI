@@ -28,7 +28,7 @@ class User extends Authenticatable
     ];
 
     public function folders()
-    {
+    {   // ユーザーはフォルダーをたくさんもっている
         return $this->hasMany('App\Folder');
     }
 }
