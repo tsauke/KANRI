@@ -20,8 +20,7 @@
             @endif
             <form
                 action="{{ route('tasks.edit', ['id' => $task->folder_id, 'task_id' => $task->id]) }}"
-                method="POST"
-            >
+                method="POST">
               {{ csrf_field() }}
               <div class="form-group">
                 <label for="title">タイトル</label>
@@ -34,8 +33,8 @@
                   @foreach(\App\Task::STATUS as $key => $val)
                     <option
                         value="{{ $key }}"
-                        {{ $key == old('status', $task->status) ? 'selected' : '' }}
-                    >
+                        {{-- 三項演算子 --}}
+                        {{ $key == old('status', $task->status) ? 'selected' : '' }}>
                       {{ $val['label'] }}
                     </option>
                   @endforeach

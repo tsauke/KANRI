@@ -78,10 +78,5 @@ class TaskController extends Controller
             'id' => $task->folder_id
         ]);
     }
-
-    public function search(int $id, Request $request)
-    {
-        dd($request);
-    }
     
 }
