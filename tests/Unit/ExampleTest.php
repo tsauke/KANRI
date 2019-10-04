@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ExampleTest extends TestCase
 {
     /**
-     * A basic test example.あｓ
+     * A basic test example.あｓｄ
      *
      * @return void
      */
